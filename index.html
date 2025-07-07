@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LoongX: Neural-Driven Image Editing</title>
+    <meta name="description" content="LoongX: Neural-Driven Image Editing. Official homepage for the LoongX project.">
+    <meta name="keywords" content="LoongX, Neural-Driven Image Editing, Multimodal, State Space, DGF, Cross-Scale, AI, Deep Learning, Computer Vision">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="static/images/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      body { font-family: 'Google Sans', 'Noto Sans', Arial, sans-serif; }
+      .hero.is-primary { background: #f5f5f5; }
+      .project-title { font-size: 2.8rem; font-weight: bold; letter-spacing: 1px; }
+      .subtitle { font-size: 1.3rem; color: #555; }
+      .news-list { margin-top: 1.5rem; }
+      .news-list li { margin-bottom: 0.5rem; }
+      .teaser-img { max-width: 600px; width: 100%; margin: 2rem auto 1rem auto; display: block; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07);}
+      .section-title { margin-top: 2.5rem; margin-bottom: 1.2rem; }
+      .citation-block { background: #f8f8f8; border-radius: 8px; padding: 1rem; font-size: 0.95rem; }
+      .navbar { border-bottom: 1px solid #eaeaea; }
+      .footer { background: #fafafa; padding: 2rem 0; font-size: 0.95rem; }
+      .external-link { margin-right: 0.7em; }
+      @media (max-width: 600px) {
+        .project-title { font-size: 2rem; }
+        .teaser-img { max-width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="static/images/icon.png" alt="LoongX Logo" style="height:2.2rem;">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item external-link" href="https://github.com/LanceZPF/loongx" target="_blank">
+            <i class="fab fa-github"></i> &nbsp; GitHub
+          </a>
+          <a class="navbar-item external-link" href="https://arxiv.org/search/?query=loongx&searchtype=all" target="_blank">
+            <i class="fas fa-file-pdf"></i> &nbsp; Paper
+          </a>
+          <a class="navbar-item external-link" href="#news">
+            <i class="fas fa-bell"></i> &nbsp; News
+          </a>
+          <a class="navbar-item external-link" href="#introduction">
+            <i class="fas fa-book-open"></i> &nbsp; Introduction
+          </a>
+          <a class="navbar-item external-link" href="#citation">
+            <i class="fas fa-quote-right"></i> &nbsp; Citation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <section class="hero is-primary" style="background: linear-gradient(rgba(245,245,245,0.92), rgba(245,245,245,0.92)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;"> -->
+    <section class="hero is-primary" style="background: linear-gradient(rgba(245,245,245,0.60), rgba(245,245,245,0.60)), url('static/images/banner.png') center/cover no-repeat;">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="project-title" style="color: #000;">
+            LoongX
+          </h1>
+          <h2 class="subtitle" style="color: #000;">
+            <b>Neural-Driven Image Editing</b>
+          </h2>
+          <div style="margin-top:1.2rem;">
+            <a href="https://github.com/LanceZPF/loongx" class="button is-dark is-rounded external-link" target="_blank">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://arxiv.org/search/?query=loongx&searchtype=all" class="button is-link is-rounded external-link" target="_blank">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper</span>
+            </a>
+            <a href="https://LoongX1.github.io/" class="button is-warning is-rounded external-link" target="_blank">
+              <span class="icon"><i class="fas fa-play-circle"></i></span>
+              <span>Demo</span>
+            </a>
+            <a href="#introduction" class="button is-primary is-rounded external-link">
+              <span class="icon" style="font-size:18px">🤗</span>
+              <span>Data</span>
+            </a>
+            <a href="#news" class="button is-info is-rounded external-link">
+              <span class="icon"><i class="fas fa-bell"></i></span>
+              <span>News</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <img src="static/images/teaser.png" alt="geometric reasoning">
+        <p>
+          LoongX leverages multimodal neural signals from advanced brain-computer interfaces (BCIs) to enable hands-free image editing, driven solely by your thoughts!
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="news" style="padding-top: 1.5rem; padding-bottom: 1rem;">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title" style="margin-bottom: 1rem;"><span role="img" aria-label="news">💡</span> News</h2>
+        <ul class="news-list" style="margin-bottom: 0.5rem;">
+          <li>
+            <b>2025/07/08</b>: The homepage has been launched and will be continuously updated. Stay tuned!
+          </li>
+          <li>
+            <b>2025/07/07</b>: Codes have been made available. Demo and data will be released soon. Stay tuned!
+          </li>
+          <li>
+            <b>2025/07/06</b>: The paper is being uploaded to arXiv.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="introduction" style="padding-top: 0.5rem; padding-bottom: 1rem;">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title" style="margin-bottom: 0.7rem;"><span role="img" aria-label="book">📖</span> Introduction</h2>
+        <div class="content is-medium" style="margin-bottom: 0.7rem;">
+          <p>
+            We introduce <b>LoongX</b>, which effectively integrates multimodal neural signals from datasets L-Mind to guide image editing through Cross-Scale State Space (CS3) encoder and Dynamic Gated Fusion (DGF) modules. Experimental results demonstrate that editing performance using only multimodal neural signals is comparable to text-driven baselines (CLIP-I: 0.6605 vs. 0.6558), and the combination of neural signals with speech instructions surpasses text prompts alone (CLIP-T: 0.2588 vs. 0.2549), proving the method's effectiveness and its significant potential in intuitive and inclusive human-AI interaction.
+          </p>
+        </div>
+        <br>
+        <img src="static/images/Model.png" alt="model structure" class="model-img" style="width:90%;max-width:140%;display:block;margin:0 auto;transition:width 0.6s cubic-bezier(.4,2,.6,1);">
+      </div>
+    </section>
+
+    <section class="section" id="citation" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title" style="margin-bottom: 1rem;"><span role="img" aria-label="citation">🖊️</span> Citation</h2>
+        <div class="citation-block">
+          <p>Coming soon. Please check back after the paper is available on arXiv.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          &copy; 2025 LoongX Team. This website is adapted from <a href="https://opening-benchmark.github.io/">OpenING</a>, <a href="https://mmmu-benchmark.github.io/" target="_blank">MMMU</a>, <a href="https://nerfies.github.io/" target="_blank">Nerfies</a>, and <a href="https://mathvista.github.io/" target="_blank">MathVista</a>.
+          <br>
+          Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Bulma navbar burger
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
